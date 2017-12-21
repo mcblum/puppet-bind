@@ -80,7 +80,7 @@
 #        'masters { mymasters; }',
 #      ],
 #    }
-#    keys                 => { 
+#    keys                 => {
 #      'example.org-tsig' => [
 #        'algorithm hmac-md5',
 #        'secret "aaabbbcccddd"',
@@ -96,14 +96,14 @@ define bind::server::conf (
   $listen_on_v6_port      = '53',
   $listen_on_v6_addr      = [ '::1' ],
   $forwarders             = [],
-  $directory              = '/var/named',
+  $directory              = '/etc/bind',
   $managed_keys_directory = undef,
   $hostname               = undef,
   $server_id              = undef,
   $version                = undef,
-  $dump_file              = '/var/named/data/cache_dump.db',
-  $statistics_file        = '/var/named/data/named_stats.txt',
-  $memstatistics_file     = '/var/named/data/named_mem_stats.txt',
+  $dump_file              = '${$directory}/data/cache_dump.db',
+  $statistics_file        = '${$directory}/data/named_stats.txt',
+  $memstatistics_file     = '${$directory}/data/named_mem_stats.txt',
   $allow_query            = [ 'localhost' ],
   $allow_query_cache      = [],
   $recursion              = 'yes',
