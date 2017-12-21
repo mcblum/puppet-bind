@@ -1,4 +1,8 @@
-# puppet-bind
+# puppet-bind (for Ubuntu)
+
+## Ubuntu Fork
+This is a fork of the puppet-bind repo that's been changed to work on Ubuntu. A few of the files locations
+were wrong and it was causing some issues. If you see any other things that look incorrect, please let me know.
 
 ## Overview
 
